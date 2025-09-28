@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Xivaera Technologies</title>
+    <meta name="description" content="Explore our comprehensive services including web development, mobile apps, cloud solutions, and more using cutting-edge technologies.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6bb768',
+                        'primary-dark': '#5ba05a',
+                        'primary-light': '#7fc77c'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">X</span>
+                        </div>
+                        <span class="text-2xl font-bold text-gray-900">Xivaera</span>
+                        <span class="text-sm text-gray-600">Technologies</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">About</a>
+                        <a href="services.html" class="text-primary font-medium hover:text-primary-dark transition-colors">Services</a>
+                        <a href="portfolio.html" class="text-gray-600 hover:text-primary transition-colors">Portfolio</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg transition-colors">
+                        Get Started
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn text-gray-600 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 text-primary font-medium">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Our <span class="text-primary">Services</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive digital solutions tailored to your business needs
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Web Development -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition-all service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
+                    <p class="text-gray-600 mb-6">Custom websites and web applications built with modern frameworks and best practices.</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Modern Frameworks (Angular, React)</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Performance Optimization</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>SEO Optimization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-6">
+                        <h4 class="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Angular</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition-all service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile App Development</h3>
+                    <p class="text-gray-600 mb-6">Native and cross-platform mobile applications for iOS and Android devices.</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Cross-Platform Development</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Native Performance</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>App Store Deployment</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Push Notifications</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-6">
+                        <h4 class="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Flutter</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">FlutterFlow</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">iOS</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition-all service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-6">Scalable cloud-based solutions with modern databases and infrastructure.</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Database Management</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>API Development</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Cloud Hosting</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Security & Backup</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-6">
+                        <h4 class="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Supabase</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">AWS</span>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Additional Services</h2>
+                <p class="text-xl text-gray-600">Complete solutions for your digital transformation</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-brush text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">UI/UX Design</h3>
+                    <p class="text-gray-600 text-sm">Beautiful and intuitive user interfaces that enhance user experience</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shopping-cart text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">E-Commerce</h3>
+                    <p class="text-gray-600 text-sm">Complete online stores with payment integration and inventory management</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-bar text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Analytics & SEO</h3>
+                    <p class="text-gray-600 text-sm">Data-driven insights and search engine optimization for better visibility</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Maintenance</h3>
+                    <p class="text-gray-600 text-sm">Ongoing support and maintenance to keep your applications running smoothly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+                <p class="text-xl text-gray-600">A systematic approach to deliver exceptional results</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                        <span class="text-white font-bold text-2xl">1</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary-light rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Discovery</h3>
+                    <p class="text-gray-600">Understanding your business needs, goals, and requirements through detailed consultation.</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                        <span class="text-white font-bold text-2xl">2</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary-light rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Planning</h3>
+                    <p class="text-gray-600">Creating detailed project roadmaps, wireframes, and technical specifications.</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                        <span class="text-white font-bold text-2xl">3</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary-light rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Development</h3>
+                    <p class="text-gray-600">Building your solution using best practices, modern technologies, and agile methodology.</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                        <span class="text-white font-bold text-2xl">4</span>
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary-light rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Launch</h3>
+                    <p class="text-gray-600">Testing, deployment, and ongoing support to ensure your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-4">Technology Stack</h2>
+                <p class="text-xl text-white/90">Modern tools and frameworks we use to build exceptional solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-angular text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">Angular</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-react text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">React</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-js-square text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">JavaScript</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-database text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">MongoDB</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-server text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">Supabase</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-css3-alt text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">CSS</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-mobile-alt text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">Flutter</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="bg-white/10 hover:bg-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-bootstrap text-4xl text-white mb-3"></i>
+                        <p class="text-white font-medium">Tailwind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h2>
+                <p class="text-xl text-gray-600 mb-8">Let's discuss how we can bring your vision to life</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+                        Get Free Quote
+                    </a>
+                    <a href="portfolio.html" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">X</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold">Xivaera</span>
+                            <div class="text-sm text-gray-400">Technologies</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Innovative digital solutions for modern businesses.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-primary">Web Development</a></li>
+                        <li><a href="services.html" class="hover:text-primary">Mobile Apps</a></li>
+                        <li><a href="services.html" class="hover:text-primary">Cloud Solutions</a></li>
+                        <li><a href="services.html" class="hover:text-primary">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-envelope mr-2"></i>info@xivaera.com</p>
+                        <p><i class="fas fa-phone mr-2"></i>+1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Business District, Tech City</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Xivaera Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
