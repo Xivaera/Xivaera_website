@@ -7,667 +7,15 @@
     <meta name="description" content="Get in touch with Xivaera Technologies. Contact us for web development, mobile apps, and digital solutions. Free consultation available.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        .hero {
-            padding: 140px 32px 72px;
-        }
-
-        .hero-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 1.05;
-            color: var(--ink);
-            letter-spacing: -0.03em;
-            max-width: 700px;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--green);
-        }
-
-        .hero-sub {
-            margin-top: 20px;
-            font-size: 1.1rem;
-            color: var(--ink-soft);
-            max-width: 480px;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        .main-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 32px 80px;
-            display: grid;
-            grid-template-columns: 1fr 420px;
-            gap: 48px;
-            align-items: start;
-        }
-
-        .form-card {
-            background: var(--white);
-            border: 1px solid rgba(107,183,104,0.15);
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-card h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            color: var(--ink);
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
-        }
-
-        .form-card p {
-            color: var(--ink-soft);
-            margin-bottom: 36px;
-            font-size: 0.95rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .field {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
-        .field label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--ink-mid);
-        }
-
-        .field input,
-        .field select,
-        .field textarea {
-            width: 100%;
-            padding: 13px 16px;
-            border: 2px solid #e8ede5;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            color: var(--ink);
-            background: var(--cream);
-            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-            outline: none;
-            appearance: none;
-        }
-
-        .field input::placeholder,
-        .field textarea::placeholder {
-            color: #b0b8ab;
-        }
-
-        .field input:focus,
-        .field select:focus,
-        .field textarea:focus {
-            border-color: var(--green);
-            background: var(--white);
-            box-shadow: 0 0 0 4px rgba(107,183,104,0.12);
-        }
-
-        .field select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7568' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            padding-right: 40px;
-            cursor: pointer;
-        }
-
-        .field textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .char-count {
-            text-align: right;
-            font-size: 0.75rem;
-            color: var(--ink-soft);
-            margin-top: 2px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        .service-chip {
-            padding: 10px 12px;
-            border: 2px solid #e8ede5;
-            border-radius: 10px;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--ink-soft);
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: center;
-            background: var(--cream);
-            user-select: none;
-        }
-
-        .service-chip:hover {
-            border-color: var(--green-light);
-            color: var(--green-dark);
-        }
-
-        .service-chip.selected {
-            border-color: var(--green);
-            background: var(--green-muted);
-            color: var(--green-dark);
-            font-weight: 600;
-        }
-
-        .field-label-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .field-label-row label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--ink-mid);
-        }
-
-        .field-label-row span {
-            font-size: 0.75rem;
-            color: var(--ink-soft);
-        }
-
-        .budget-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        .budget-chip {
-            padding: 8px 16px;
-            border: 2px solid #e8ede5;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--ink-soft);
-            cursor: pointer;
-            transition: all 0.2s;
-            background: var(--cream);
-            user-select: none;
-        }
-
-        .budget-chip:hover {
-            border-color: var(--green-light);
-            color: var(--green-dark);
-        }
-
-        .budget-chip.selected {
-            border-color: var(--green);
-            background: var(--green-muted);
-            color: var(--green-dark);
-            font-weight: 600;
-        }
-
-        input[type="hidden"] {
-            display: none;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 16px 24px;
-            border-radius: 14px;
-            font-size: 1rem;
-            margin-top: 8px;
-            letter-spacing: 0.01em;
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.65;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info-card {
-            background: var(--white);
-            border: 1px solid rgba(107,183,104,0.15);
-            border-radius: 20px;
-            padding: 32px;
-            box-shadow: var(--shadow);
-        }
-
-        .info-card h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.4rem;
-            color: var(--ink);
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 24px;
-            align-items: flex-start;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-icon {
-            width: 42px;
-            height: 42px;
-            background: var(--green-muted);
-            border: 1px solid rgba(107,183,104,0.25);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--green-dark);
-            font-size: 0.9rem;
-        }
-
-        .contact-item-text h4 {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-            margin-bottom: 4px;
-        }
-
-        .contact-item-text p,
-        .contact-item-text a {
-            font-size: 0.9rem;
-            color: var(--ink);
-            line-height: 1.6;
-        }
-
-        .contact-item-text a:hover {
-            color: var(--green);
-        }
-
-        .social-row {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .social-btn {
-            width: 40px;
-            height: 40px;
-            background: var(--cream);
-            border: 1px solid #e2e8de;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--ink-soft);
-            transition: all 0.2s;
-            font-size: 0.9rem;
-        }
-
-        .social-btn:hover {
-            background: var(--green);
-            border-color: var(--green);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .map-card {
-            background: var(--ink);
-            border-radius: 20px;
-            padding: 28px;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .map-card::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 160px;
-            height: 160px;
-            background: radial-gradient(circle, rgba(107,183,104,0.25) 0%, transparent 70%);
-        }
-
-        .map-card h4 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .map-card p {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .map-preview {
-            height: 140px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 16px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .map-preview::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(rgba(107,183,104,0.07) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(107,183,104,0.07) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
-
-        .map-pin {
-            width: 36px;
-            height: 36px;
-            background: var(--green);
-            border-radius: 50% 50% 50% 0;
-            transform: rotate(-45deg);
-            position: relative;
-            box-shadow: 0 4px 16px rgba(107,183,104,0.5);
-            z-index: 1;
-        }
-
-        .map-pin::after {
-            content: '';
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            background: white;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-
-        .map-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: white;
-            padding: 11px 16px;
-            border-radius: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .map-link:hover {
-            background: var(--green);
-            border-color: var(--green);
-        }
-
-        .faq-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 32px 80px;
-        }
-
-        .faq-header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .faq-header h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.5rem;
-            color: var(--ink);
-            letter-spacing: -0.02em;
-        }
-
-        .faq-header p {
-            color: var(--ink-soft);
-            max-width: 300px;
-            text-align: right;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .faq-item {
-            background: var(--white);
-            border: 1px solid rgba(107,183,104,0.12);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .faq-btn {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 22px 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            gap: 16px;
-        }
-
-        .faq-btn h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--ink);
-            flex: 1;
-        }
-
-        .faq-icon {
-            width: 28px;
-            height: 28px;
-            background: var(--green-muted);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--green-dark);
-            font-size: 0.75rem;
-            flex-shrink: 0;
-            transition: all 0.2s;
-        }
-
-        .faq-item.open .faq-icon {
-            background: var(--green);
-            color: white;
-            transform: rotate(180deg);
-        }
-
-        .faq-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s;
-            padding: 0 24px;
-        }
-
-        .faq-body p {
-            padding-bottom: 22px;
-            font-size: 0.9rem;
-            color: var(--ink-soft);
-            line-height: 1.75;
-            border-top: 1px solid #eef2eb;
-            padding-top: 16px;
-        }
-
-        .faq-item.open .faq-body {
-            max-height: 300px;
-        }
-
-        .cta-section {
-            background: var(--ink);
-            padding: 80px 32px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 300px;
-            background: radial-gradient(ellipse, rgba(107,183,104,0.15) 0%, transparent 70%);
-        }
-
-        .cta-inner {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-
-        .cta-inner h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3rem;
-            color: white;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .cta-inner h2 em {
-            font-style: italic;
-            color: var(--green-light);
-        }
-
-        .cta-inner p {
-            color: rgba(255,255,255,0.6);
-            font-size: 1.05rem;
-            margin-bottom: 36px;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 900px) {
-            .main-section {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                display: contents;
-            }
-
-            .info-card {
-                order: 2;
-            }
-
-            .map-card {
-                order: 3;
-            }
-
-            .form-card {
-                order: 1;
-            }
-
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .faq-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .faq-header p {
-                text-align: left;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 540px) {
-            .hero {
-                padding: 120px 20px 48px;
-            }
-
-            .main-section,
-            .faq-section {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .form-card {
-                padding: 28px 20px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-section {
-                padding: 80px 20px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="page-contact">
     <nav>
         <div class="nav-inner">
             <a href="index.html">
-                <img src="assets/img/logo.png" alt="Xivaera Technologies" style="height:62px;width:auto;display:block;">
+                <img src="assets/img/logo.png" alt="Xivaera Technologies" class="nav-logo">
             </a>
 
             <ul class="nav-links">
@@ -692,11 +40,43 @@
         <a href="contact.html" class="active">Contact</a>
     </div>
 
-    <section class="hero">
-        <div class="hero-inner fade-up">
-            <div class="hero-tag">Available for new projects</div>
-            <h1>Let's build something <em>great</em> together</h1>
-            <p class="hero-sub">Ready to transform your business with innovative digital solutions? Drop us a message and we'll get back to you within 24 hours.</p>
+    <section class="about-style-hero">
+        <div class="about-style-hero-inner">
+            <div class="about-style-hero-content fade-up">
+                <div class="about-style-kicker">Let's talk</div>
+
+                <h1>Let’s build something <em>great together.</em></h1>
+
+                <div class="about-style-services-line">
+                    <span>Free Consultation</span><span class="dot"></span>
+                    <span>24hr Reply</span><span class="dot"></span>
+                    <span>London Based</span>
+                </div>
+
+                <div class="about-style-values">
+                    <div class="about-style-value">
+                        <i class="fas fa-comments"></i>
+                        <span>Free<br>Consultation</span>
+                    </div>
+                    <div class="about-style-value">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Clear<br>Advice</span>
+                    </div>
+                    <div class="about-style-value">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast<br>Response</span>
+                    </div>
+                    <div class="about-style-value">
+                        <i class="fas fa-handshake"></i>
+                        <span>No<br>Pressure</span>
+                    </div>
+                </div>
+
+                <div class="about-style-quote">
+                    <div class="about-style-quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>Tell us what you’re planning and we’ll help you find the <strong>right next step.</strong></p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -795,7 +175,7 @@
                     <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="contact-item-text">
                         <h4>Office</h4>
-                        <p>Suite 6837, Unit 3a<br>34–35 Hatton Garden<br>London, EC1N 8DX</p>
+                        <p>60 Tottenham Court Road<br>Suite 6837a, Fitzrovia<br>London, England, W1T 2EW</p>
                     </div>
                 </div>
 
@@ -838,11 +218,11 @@
 
             <div class="map-card fade-up delay-2">
                 <h4>Find our office</h4>
-                <p>Suite 6837, Unit 3a, 34–35 Hatton Garden, London EC1N 8DX</p>
+                <p>60 Tottenham Court Road, Suite 6837a, Fitzrovia, London, England, W1T 2EW</p>
                 <div class="map-preview">
                     <div class="map-pin"></div>
                 </div>
-                <a href="https://www.google.com/maps?ll=51.520032,-0.108125&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=14204225801665394951" target="_blank" rel="noopener" class="map-link">
+                <a href="https://www.google.com/maps/search/?api=1&query=60%20Tottenham%20Court%20Road%2C%20Suite%206837a%2C%20Fitzrovia%2C%20London%2C%20England%2C%20W1T%202EW" target="_blank" rel="noopener" class="map-link">
                     <i class="fas fa-external-link-alt" style="font-size:0.8rem"></i>
                     Open in Google Maps
                 </a>
@@ -883,7 +263,7 @@
                     <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                 </button>
                 <div class="faq-body">
-                    <p>Yes — we offer comprehensive support and maintenance packages including updates, security patches, performance monitoring, and technical support across different tiers.</p>
+                    <p>Yes! we offer comprehensive support and maintenance packages including updates, security patches, performance monitoring, and technical support across different tiers.</p>
                 </div>
             </div>
 
@@ -913,7 +293,7 @@
                     <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                 </button>
                 <div class="faq-body">
-                    <p>Simply fill out the contact form above or give us a call. We'll schedule a 30-minute discovery call to understand your needs and outline how we can help — completely free, no obligation.</p>
+                    <p>Just fill out the contact form above or give us a call. We’ll arrange a free 30-minute chat to learn more about what you need, answer any questions, and see how we can help. There’s no pressure and no obligation.</p>
                 </div>
             </div>
         </div>
@@ -922,7 +302,7 @@
     <section class="cta-section">
         <div class="cta-inner fade-up">
             <h2>Ready to get <em>started?</em></h2>
-            <p>Schedule a free 30-minute consultation. No pressure, no commitment — just a conversation about your project.</p>
+           <p>Schedule a free 30-minute consultation. No pressure, no commitment—just a conversation about your project.</p>
             <a href="#contact-form" class="btn-primary">
                 Schedule free consultation
                 <i class="fas fa-arrow-right" style="font-size:0.85rem"></i>
@@ -934,8 +314,8 @@
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="assets/img/logo.png" alt="Xivaera Technologies" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85">
-                    <p>Innovative digital solutions for modern businesses — from web and mobile to cloud and beyond.</p>
+                    <img src="assets/img/logo.png" alt="Xivaera Technologies" class="footer-logo">
+                    <p>We help businesses bring their ideas to life with practical digital solutions, from websites and mobile apps to cloud services and ongoing support.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -944,16 +324,21 @@
                     </div>
                 </div>
 
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Web Development</a></li>
-                        <li><a href="services.html">Mobile Apps</a></li>
-                        <li><a href="services.html">Cloud Solutions</a></li>
-                        <li><a href="services.html">UI/UX Design</a></li>
-                        <li><a href="services.html">E-Commerce</a></li>
-                    </ul>
-                </div>
+               <div class="footer-col">
+    <h4>Services</h4>
+    <ul>
+        <li><a href="services.html">Web Development</a></li>
+        <li><a href="services.html">Mobile App Development</a></li>
+        <li><a href="services.html">WordPress Design & Development</a></li>
+        <li><a href="services.html">Digital Marketing</a></li>
+        <li><a href="services.html">Cloud Solutions</a></li>
+        <li><a href="services.html">UI/UX Design</a></li>
+        <li><a href="services.html">E-Commerce Development</a></li>
+        <li><a href="services.html">SEO & Analytics</a></li>
+        <li><a href="services.html">Support & Maintenance</a></li>
+    </ul>
+</div>
+
 
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -977,7 +362,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Suite 6837, Unit 3a, 34–35 Hatton Garden, London EC1N 8DX</span>
+                            <span>60 Tottenham Court Road, Suite 6837a, Fitzrovia, London, England, W1T 2EW</span>
                         </div>
                     </div>
                 </div>
